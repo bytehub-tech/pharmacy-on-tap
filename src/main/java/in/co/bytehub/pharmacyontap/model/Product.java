@@ -15,10 +15,11 @@ public class Product {
     private String name;
     private String salts;
     private String batch;
-    private double cp; // cost price
-    private double mp; // marked price
+    private Double cp; // cost price
+    private Double mp; // marked price
     private LocalDate expDate;
     private ProductType type;
+    private Integer quantity;
 
     public Long getId() {
         return id;
@@ -52,19 +53,19 @@ public class Product {
         this.batch = batch;
     }
 
-    public double getCp() {
+    public Double getCp() {
         return cp;
     }
 
-    public void setCp(double cp) {
+    public void setCp(Double cp) {
         this.cp = cp;
     }
 
-    public double getMp() {
+    public Double getMp() {
         return mp;
     }
 
-    public void setMp(double mp) {
+    public void setMp(Double mp) {
         this.mp = mp;
     }
 
@@ -84,5 +85,12 @@ public class Product {
         this.type = type;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
 
+    public Product setQuantity(Integer quantity) {
+        this.quantity = quantity;
+        return this;
+    }
 }

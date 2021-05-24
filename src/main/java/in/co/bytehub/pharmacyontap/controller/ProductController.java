@@ -29,9 +29,4 @@ public class ProductController {
         productService.addProduct(product);
     }
 
-    @PutMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public void addProduct(@RequestBody Product product, @PathVariable Long id) {
-
-    }
 }

@@ -15,11 +15,12 @@ public class ProductSearch {
     private String name;
     private String salts;
     private String batch;
-    private double cp; // cost price
-    private double mp; // marked price
+    private Double cp; // cost price
+    private Double mp; // marked price
     @Field(type = FieldType.Date, pattern = "yyyy-MM-dd")
     private LocalDate expDate;
     private ProductType type;
+    private Integer quantity;
 
     public Long getId() {
         return id;
@@ -53,19 +54,19 @@ public class ProductSearch {
         this.batch = batch;
     }
 
-    public double getCp() {
+    public Double getCp() {
         return cp;
     }
 
-    public void setCp(double cp) {
+    public void setCp(Double cp) {
         this.cp = cp;
     }
 
-    public double getMp() {
+    public Double getMp() {
         return mp;
     }
 
-    public void setMp(double mp) {
+    public void setMp(Double mp) {
         this.mp = mp;
     }
 
@@ -85,5 +86,12 @@ public class ProductSearch {
         this.type = type;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
 
+    public ProductSearch setQuantity(Integer quantity) {
+        this.quantity = quantity;
+        return this;
+    }
 }

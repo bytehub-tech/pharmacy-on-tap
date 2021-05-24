@@ -69,6 +69,7 @@ public class ProductService {
         productSearch.setMp(product.getMp());
         productSearch.setExpDate(product.getExpDate());
         productSearch.setType(product.getType());
+        productSearch.setQuantity(product.getQuantity());
         elasticsearchRestTemplate.save(productSearch);
     }
 
