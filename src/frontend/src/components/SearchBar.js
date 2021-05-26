@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function searchPharmaProduct () {
-
-
-
+function searchProduct (searchTerm) {
+  
+  console.log(searchTerm)
 }
 
-const SearchBar = () =>
+const SearchBar = () => {
+  const [searchTerm, setSearchTerm] = useState('')
   
-  <div className={'w3-container w3-half'}>
-    <input id ="searchBar" className={'w3-input w3-border w3-round-xxlarge'} type={'search'} onKeyUp={searchPharmaProduct}/>
+  return <div className={'w3-container w3-half'}>
+    <input id="searchBar" value={searchTerm} className={'w3-input w3-border w3-round-xxlarge'} type={'search'}
+           onChange={(event) => setSearchTerm(event.target.value)}
+           onKeyUp={() => searchProduct(searchTerm)}/>
   </div>
-
+}
 export default SearchBar
